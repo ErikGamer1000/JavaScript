@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.tudo, body{
+    background-color: black;
+}
+header {
+    border: 10px outset white;
+    padding: 5px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    animation-name: head;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes head {
+    from {
+        transform: translateY(-400px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+.pesquisar {
+    border: 2px outset white;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    height: 30px;
+    margin: 5px;
+    width: 20vw;
+    text-align: left;
+    /*
+    animation-name: pesq;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    */
+}
+/*
+@keyframes pesq {
+    from {
+        transform: translateX(600px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+*/
+.logo {
+    border: 7px outset rgba(224, 102, 102, 0.863);
+    margin: 5px;
+    width: 65vw;
+    height: 220px;
+    /*
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    */
+}
+/*
+@keyframes logo {
+    from {
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+*/
+img {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+nav {
+    height:auto;
+    padding:0px;
+    border: 10px outset white;
+    background-color: rgba(0, 0, 0, 0.966);
+    margin-top: 15px;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 15px;
+}
+#botão {
+    display: none;
+}
+@media (max-width: 700px) {
+    #botão {
+        width: 90%;
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border-color: white;
+        border: 5px outset;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        gap: .5rem;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+    #sand{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: white;
+   
+    }
+    #sand::after, #sand::before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+        transition: .4s;
+        position: relative;
+        
+    }
+    #nav.active #sand{
+        border-top-color: transparent;
+    }
+    #nav.active #sand::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #sand::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    #menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: black;
+        transition: .4s;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+    width: auto;
+    height: 100%;
+    margin: 2%;
+    visibility: visible;
+    border: 5px outset white;
+    border-color: white;
+    border-radius: 20px;
+    padding-right: 9%;
+    }
+}
+ul {
+    border: 5px outset white;
+    margin: 10px;
+    border-radius: 20px;
+    font-family: 'Square Peg', cursive;
+    font-size: x-large;
+}
+.título {
+    display: flex;
+    justify-content: center;
+    border: 5px outset white;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin: 10px;
+    font-family: 'Square Peg', cursive;
+    font-size: xx-large;
+    color: white;
+    }
+.cor {
+    color: rgba(224, 102, 102, 0.863);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding:10px;
+    border: 10px outset white;
+    background-color: rgba(0, 0, 0, 0.966);
+    margin-top: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: x-large;
+}
+.gridDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+}
+figure, figcaption, .fig{
+    color: white;
+    margin: 0;
+}
+.Fimg{
+    height: 500px;
+}
+.ImgDstaq {
+    height: 430px;
+    border: 5px outset grey;
+    margin-top: 10px;
+}
+figcaption {
+    text-align: center;
+}
+.fig {
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+.prec {
+    border: 5px outset grey;
+    color: white;
+    margin: 5px;
+    text-align: center;
+    margin-top: 15px;
+}
+.tudoNat {
+    padding: 5px;
+}
+form {
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+.Envio {
+    background-color: rgba(224, 102, 102, 0.863);
+    color: black;
+    border: 2px outset rgba(224, 102, 102, 0.863);
+}
+#form1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#form2 {
+    display: none;
+}
+.formNovo {
+    display: flex;
+    flex-direction: column;
+}
+#botao2 {
+    background-color: rgba(224, 102, 102, 0.863);
+    color: black;
+    border: 2px outset rgba(224, 102, 102, 0.863);
+}
+#output {
+    text-align: left;
+    border: 5px outset rgba(224, 102, 102, 0.863);
+    margin: 5px;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding: 10px;
+
+}
+footer {
+    height:auto;
+    padding:20px;
+    padding-left: 25px;
+    border: 10px outset white;
+    background-color: rgba(0, 0, 0, 0.966);
+    margin-top: 15px;
+    font-family: 'Square Peg', cursive;
+    font-size: xx-large;
+    }
+    .logo-footer{
+    height:230px;
+    border: 7px outset rgba(224, 102, 102, 0.863);
+    margin-bottom: 20px;
+    }
+    .links{
+    border: 4px outset rgba(224, 102, 102, 0.863);
+    width: 20vw;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    color: white;
+    }
+    .links-div{
+        display: flex;
+        flex-direction: row;
+    }
+    .ama {
+        animation-name: ana;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-direction:alternate;
+        animation-fill-mode: forwards;
+    }
+    @keyframes ana {
+        from {
+            color: white;
+        }
+        to {
+            color: rgba(224, 102, 102, 0.863);
+        }
+    }
+
+@media (max-width: 700px) {
+    .logo {
+        width: 100vw;
+    }
+    .pesquisar {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        width: 80vw;
+    }
+    .páginas{
+        flex-direction: column;
+        align-items: center;
+    } 
+    .links-div{
+        flex-direction: column;
+    }
+    .links {
+        width: 80vw;
+    }
+}
+@media (max-width: 1000px) {
+    .gridDiv {
+        grid-template-columns: 1fr;
+    }
+    .ImgDstaq {
+        margin: 10px;
+    }
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.enviar {
+    align-self: center;
+}
+label, input {
+    margin: 2px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+input {
+    height: 50px;
+}
+div label {
+    margin-right: 50px;
+}
